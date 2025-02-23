@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>DHTML Popup Window</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords"    content="" />
+
+<link rel="stylesheet" type="text/css" href="sample.css" />
+
+<script type="text/javascript" src="popup-window.js"></script>
+
+</head>
+<body>
+
+<h3>DHTML Popup Window</h3>
+
+
+<!-- ***** Form ************************************************************ -->
+
+<form action="" onsubmit="return false;">
+<div>
+<input type="button" value="Top-Left"
+       onclick="popup_show('popup', 'popup_drag', 'popup_exit', 'screen-top-left',      20,  20);" />
+<input type="button" value="Center"
+       onclick="popup_show('popup', 'popup_drag', 'popup_exit', 'screen-center',         0,   0);" />
+<input type="button" value="Bottom-Right"
+       onclick="popup_show('popup', 'popup_drag', 'popup_exit', 'screen-bottom-right', -20, -20);" />
+<input type="button" value="Mouse"
+       onclick="popup_show('popup', 'popup_drag', 'popup_exit', 'mouse',               -10, -10);" />
+<input type="button" value="Bottom" id="pos_bottom"
+       onclick="popup_show('popup', 'popup_drag', 'popup_exit', 'element-bottom', 0, 10, 'pos_bottom');" />
+<input type="button" value="Right"  id="pos_right"
+       onclick="popup_show('popup', 'popup_drag', 'popup_exit', 'element-right',  10, 0, 'pos_right' );" />
+<input type="button" value="Default"
+       onclick="popup_show('popup', 'popup_drag', 'popup_exit');" />
+</div>
+</form>
+
+
+<!-- ***** Popup Window **************************************************** -->
+
+<div class="sample_popup"     id="popup" style="display: none;">
+
+<div class="menu_form_header" id="popup_drag">
+<img class="menu_form_exit"   id="popup_exit" src="form_exit.png" alt="" />
+&nbsp;&nbsp;&nbsp;Login
+</div>
+
+<div class="menu_form_body">
+<form action="sample.php">
+<table>
+  <tr><th>Username:</th><td><input class="field" type="text"     onfocus="select();" name="username" /></td></tr>
+  <tr><th>Password:</th><td><input class="field" type="password" onfocus="select();" name="password" /></td></tr>
+  <tr><th>         </th><td><input class="btn"   type="submit"   value="Submit" /></td></tr>
+</table>
+</form>
+</div>
+
+</div>
+
+
+<!-- ***** Info ************************************************************ -->
+
+<div style="font-stile: Arial, Sans-Serif; font-size: 75%;">
+<br />
+<a href="http://www.php-development.ru/javascripts/popup-window.php">Home</a>
+&nbsp; | &nbsp;
+<a href="http://www.hotscripts.com/Detailed/62154.html">Vote</a> for the script
+</div>
+
+</body>
+</html>
